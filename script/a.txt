@@ -1,0 +1,76 @@
+(function(width, height, length, current, dx, dy, x, y, hasFood, newEl){     
+    
+  document.body.onkeydown = function(e){
+      dx = (e.keyCode - 38) % 2, dy = (e.keyCode - 39) % 2;
+  };
+      
+  var timer = setInterval(function () {
+      x = (x + dx) < 0 ? width - 1 : (x + dx) % width; 
+      y = (y + dy) < 0 ? height - 1 : (y + dy) % height;
+      newEl = document.getElementsByClassName(y + '_' + x)[0]
+      if(newEl.className.indexOf('s') > 0) {
+        clearInterval(timer), alert('Game Over! Score: ' + length)
+      };
+      if(newEl.className.indexOf('f') > 0) {
+        newEl.className = newEl.className.replace(' f', ''), length++, hasFood = false;
+      }
+      newEl.className += ' s', newEl.setAttribute('data-n', current++);
+  
+      for(var i = 0, min = Infinity, item, items = document.getElementsByClassName('s'), len = items.length; i < len && len > length; i++)
+        if(+items[i].getAttribute('data-n') < min)
+          min = +items[i].getAttribute('data-n'), item = items[i];
+  
+      if(!!item) item.className = item.className.replace(' s', '');
+  
+      for(var fItem, fX, fY; !hasFood; fX = Math.round(Math.random() * 10 % width), fY = Math.round(Math.random() * 10 % height))
+        if(!!fX && !!fY && document.getElementsByClassName(fY + '_' + fX)[0].className.indexOf('s') < 0)
+          hasFood = true, document.getElementsByClassName(fY + '_' + fX)[0].className += ' f';
+  }, 1000);
+  
+  })(10, 10, 5, 1, 1, 0, 0, 0, false, null);
+
+
+
+  form {
+    margin: 0 auto;
+    background: rgba(0, 186, 255, 0.77);
+    width: 450px;
+    height: 500px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.82);
+
+}
+
+body {
+    width: 100%;
+    background-image: url(https://image.freepik.com/free-vector/abstract-diagonal-lines-striped-orange-background_78474-381.jpg);
+    background-blend-mode: multiply;
+    background-color: #2e3a44;
+    background-size: 1500px;
+    text-align: center;
+    color: #fff;
+  }
+
+=================================
+
+
+  <!DOCTYPE html>
+<html>
+    <head>
+        <title>music player</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+    </body>
+</script>
+</body>
+</html>
+
+==========================
+var z = document.getElementById("P").value;
+
+if(z == "Lalka66656")
+                    {document.getElementById("txV").innerHTML= z;
+                    document.location.href = 'profil.html';
