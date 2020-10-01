@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF=8">
+ <title> CLICKER </title>  
+<style>
+    body {
+    background-color: aquamarine;
+    user-select: none;
+    text-align: center;
+}
+
+h1 {
+    color: orange;
+}
+
+br {
+    font-size: 3;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4px;
+    background-color: #212121;
+    padding: 3px;
+    border-radius: 5px;
+    max-width: 360;
+    font-family: "Tahoma";
+}
+.item {
+    background-color: #b3e5fc;
+    color: #000;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: bold;
+}
+form {
+    max-width: 100%;
+}
+input {
+    width: 100%;
+    height: 100px;
+    border: 100px;
+    font-size: 50px;
+    outline: 100px;
+    text-align: center;
+}
+.input {
+    grid-column: 1/-1;
+    padding: 0;
+}
+
+#work {
+margin-top: 100px;
+margin-bottom: 350px;
+}
+
+#levelup { 
+margin-top: 10px;
+margin-bottom: 100px;
+}
+</style>
+<body>
+    
+    <h1>Welcome to the game CLICKER!</h1>
+         <div>
+               <strong id="money"> Your money: 0 <br/> </strong>
+               <strong id="level"> Your level: 0 <br/></strong>
+            <button id="work" onclick="Working()"> <strong> WORK<br/> </strong>
+            <button id="levelup" onclick="LevelUp()"> UGRADE: 50$</button> </button>
+            <div class="item clean" onclick="clean()">Click here before clicking on the button in the menu</div>
+            <div class="container">
+                <div class="item input"><form name="form"><input type="text"
+                    name="textviev" readonly></form></div>
+                    <div class="item clean" onclick="clean()">CLEAR</div>
+                    <div class="item" onclick="insert('0.5.1')">version</div>
+                    <div class="item" onclick="insert('maknau80')">creator</div>
+                    <div class="item" onclick="insert('---')">discord</div>
+        
+         </div>
+         <script>
+            function insert(num) {
+                document.form.textviev.value =
+                document.form.textviev.value + num;
+            }
+            function clean() {
+                document.form.textviev.value = "";
+            }
+        </script>
+
+<script type="text/javascript">
+  var OpenOrLock = 0;
+  var moneySecond = 0;
+  var moneys = 0;
+  var plusMoneys = 1;
+  var level = 0;
+  var levelup_cena = 50;
+    function Working () {
+  moneys = moneys + plusMoneys;
+      document.getElementById('money').innerHTML = ( 'Your money:' + ' ' + moneys + '<br/>' );
+}
+    function LevelUp () {
+    if (moneys >= levelup_cena--) {
+  moneys = moneys - levelup_cena;
+  levelup = levelup + 1;
+  levelup_cena + 1;
+  plusMoneys++;
+  levelup_cena = levelup_cena * 2;
+  level++;
+      document.getElementById('money').innerHTML = ( 'Your money:' + ' ' + moneys + '<br/>' );
+      document.getElementById('level').innerHTML = ( 'Your level:' + ' ' + level + '<br/>' );
+      document.getElementById('levelup').innerHTML = ('<strong>' + 'UPGRADE:' + ' ' + levelup_cena + '$' +'</strong>' );
+    }
+}
+</script>
+</body>
+</html>
