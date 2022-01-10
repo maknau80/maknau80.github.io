@@ -1,6 +1,6 @@
 body {
     width: 99%;
-    background-image: url(https://www.zastavki.com/pictures/1920x1080/2015/Backgrounds_Digital_background_of_neon_stripes_097229_23.jpg);
+    background-image: url(https://img.freepik.com/free-photo/3d-low-poly-abstract-background-with-connecting-lines-and-dots_1048-11673.jpg?size=626&ext=jpg&ga=GA1.2.1607212094.1598227200);
     background-blend-mode: multiply;
     background-size: 1500px;
     text-align: center;
@@ -10,7 +10,7 @@ body {
 
   #overview {
     float: left;
-    background-image: url(https://img.freepik.com/free-photo/3d-low-poly-abstract-background-with-connecting-lines-and-dots_1048-11673.jpg?size=626&ext=jpg&ga=GA1.2.1607212094.1598227200);
+    background-image: url(https://www.zastavki.com/pictures/1920x1080/2015/Backgrounds_Digital_background_of_neon_stripes_097229_23.jpg);
   
     background-blend-mode: multiply;
     background-color: #403f40;
