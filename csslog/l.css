@@ -7,13 +7,17 @@
 
 body {
     width: 99%;
-    background-image: url(https://image.freepik.com/free-vector/abstract-diagonal-lines-striped-orange-background_78474-381.jpg);
+    background-image: url(https://assets.turbologo.ru/blog/ru/2021/10/30071021/background4.png);
     background-blend-mode: multiply;
     background-color: #2e3a44;
-    background-size: 1950px;
+    background-size: 3000px;
     text-align: center;
     color: #fff;
   }
+
+
+https://image.freepik.com/free-vector/abstract-diagonal-lines-striped-orange-background_78474-381.jpg
+
 
 h1 {
     cursor: help;
@@ -34,14 +38,14 @@ h2 {
     cursor: help;
     margin: 0;
     text-transform: uppercase;
-    color: #008000;
+    color: #3CB371;
 }
 
 h3 {
     cursor: help;
     margin: 0;
     text-transform: uppercase;
-    color: #FFD700;
+    color: #4169E1;
 }
 
 .group {
